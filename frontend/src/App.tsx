@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import { sampleProducts } from './data'
 import './App.css'
 
 function App() {
@@ -9,7 +10,19 @@ function App() {
   return (
     <div>
       <header>TS AMAZONA</header>
-      <main></main>
+      <main>
+        <ul>
+        {sampleProducts.map((product) =>(
+        <li key={product.slug}>
+          <img src={product.image} alt={product.name} className='product-image'/>
+           <h2>{product.name}</h2>
+           <p>{product.price} DH</p>
+          </li>
+          ))
+        }
+        </ul>
+       
+      </main>
       <footer>All right reserved</footer>
     </div>
   )

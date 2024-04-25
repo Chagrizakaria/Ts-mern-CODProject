@@ -1,4 +1,4 @@
-import { Navbar, Container, Nav, Row, Col } from 'react-bootstrap'
+import { Navbar, Container, Nav } from 'react-bootstrap'
 import { Outlet } from 'react-router-dom'
 function App() {
   return (

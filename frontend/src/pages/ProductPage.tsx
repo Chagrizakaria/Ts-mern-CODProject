@@ -62,7 +62,6 @@ export default function ProductPage() {
                   <Row>
                     <Col>Status : </Col>
                     <Col>
-  
                       {product.countInStock > 0 ? (
                         <Badge bg="success">In Stock</Badge>
                       ) : (
@@ -71,19 +70,13 @@ export default function ProductPage() {
                     </Col>
                   </Row>
                 </ListGroup.Item>
-                {product.countInStock >0 && (
-                    <ListGroup.Item>
-                      <div className='d-grid'>
-                        <Button>
-                          Add to Cart
-                        </Button>
-
-                      </div>
-                    </ListGroup.Item>
-                  )
-                }
-           
-
+                {product.countInStock > 0 && (
+                  <ListGroup.Item>
+                    <div className="d-grid">
+                      <Button>Add to Cart</Button>
+                    </div>
+                  </ListGroup.Item>
+                )}
               </ListGroup>
             </Card.Body>
           </Card>
